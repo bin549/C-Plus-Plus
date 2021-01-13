@@ -1,0 +1,12 @@
+Error (use-package): Cannot load evil-unimpaired
+Error (use-package): flx-ido/:init: Symbol’s function definition is void: flx-ido-mode
+Error (use-package): flx-ido/:catch: Required feature ‘flx-ido’ was not provided
+Error (use-package): undo-tree/:init: Symbol’s function definition is void: global-undo-tree-mode
+Error (use-package): undo-tree/:catch: Required feature ‘undo-tree’ was not provided
+Warning (initialization): An error occurred while loading ‘d:/software/Emacs/.emacs.d/init.el’:
+
+error: The directory ‘~/.emacs.d/server’ is unsafe
+
+To ensure normal operation, you should investigate and remove the
+cause of the error in your initialization file.  Start Emacs with
+the ‘--debug-init’ option to view a complete error backtrace.
