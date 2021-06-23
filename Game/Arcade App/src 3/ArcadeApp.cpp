@@ -13,6 +13,5 @@ int main(int argc, const char *argv[])
 	{
 		App::Singleton().Run();
 	}
-
 	return 0;
 }

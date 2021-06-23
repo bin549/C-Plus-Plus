@@ -34,7 +34,6 @@ ScreenBuffer &ScreenBuffer::operator=(const ScreenBuffer &screenBuffer)
 	if (screenBuffer.mSurface != nullptr)
 	{
 		mSurface = SDL_CreateRGBSurfaceWithFormat(0, screenBuffer.mSurface->w, screenBuffer.mSurface->h, 0, screenBuffer.mSurface->format->format);
-
 		SDL_BlitSurface(screenBuffer.mSurface, nullptr, mSurface, nullptr);
 	}
 	return *this;
