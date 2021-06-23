@@ -1,5 +1,6 @@
 // if.cpp -- using the if statement
 #include <iostream>
+
 int main()
 {
     using namespace std;
@@ -18,5 +19,3 @@ int main()
     cout << " characters total in sentence\n";
     return 0;
 }
-
-
