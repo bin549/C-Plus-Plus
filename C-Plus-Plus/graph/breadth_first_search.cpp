@@ -12,32 +12,21 @@ namespace graph
     template <typename T>
     class Graph
     {
-        std::map<T, std::list<T>> adjacency_list;
-
     public:
         Graph() = default;
         ;
         void add_edge(T u, T v, bool bidir = true)
         {
-            adjacency_list[u].push_back(v); // u-->v edge added
+            adjacency_list[u].push_back(v);
             if (bidir == true)
             {
-                // if graph is bidirectional
-                adjacency_list[v].push_back(u); // v-->u edge added
+                adjacency_list[v].push_back(u);
             }
         }
 
-        /**
-     *  this function performs the breadth first search on graph and return a
-     *  mapping which maps the nodes to a boolean value representing whether the
-     *  node was traversed or not.
-     */
         std::map<T, bool> breadth_first_search(T src)
         {
-            /// mapping to keep track of all visited nodes
             std::map<T, bool> visited;
-            /// initialise every possible vertex to map to false
-            /// initially none of the vertices are unvisited
             for (auto const &adjlist : adjacency_list)
             {
                 visited[adjlist.first] = false;
@@ -74,7 +63,11 @@ namespace graph
             }
             return visited;
         }
+
+    private:
+        std::map<T, std::list<T>> adjacency_list;
     };
+
 }
 
 /** Test function */
